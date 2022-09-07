@@ -1,0 +1,38 @@
+import:
+  - ~/.config/alacritty/colors.yml
+font:
+  normal:
+    family: Iosevka
+  size: 14
+  offset:
+    y: 4
+key_bindings:
+  - action: IncreaseFontSize
+    key: Asterisk
+    mods: Control
+  - action: DecreaseFontSize
+    key: Minus
+    mods: Control
+  - chars: "\u0017"
+    key: Back
+    mods: Control
+  - chars: "\u0017"
+    key: Back
+    mods: Alt
+mouse:
+  hide_when_typing: true
+scrolling:
+  history: 100000
+  multiplier: 4
+selection:
+  unfocused_hollow: true
+window:
+  dimensions:
+    columns: 96
+    lines: 26
+  padding:
+    x: 40
+    y: 40
+mouse_bindings:
+  - action: Quit
+    mouse: Middle
