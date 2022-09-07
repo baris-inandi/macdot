@@ -1,7 +1,5 @@
 #!/usr/bin/bash
 
-mkdir -p ~/me
-
 mkdir -p ~/.config/fish/
 ln -f -s ~/me/mindot/config/config.fish ~/.config/fish/config.fish
 
