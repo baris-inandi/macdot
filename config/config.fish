@@ -1,3 +1,6 @@
+# source brew if available
+eval $(/opt/homebrew/bin/brew shellenv) | true
+
 # default editor
 set -gx EDITOR micro
 
