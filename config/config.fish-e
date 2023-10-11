@@ -7,8 +7,8 @@ end
 set -gx EDITOR micro
 
 # default browser
-set -gx BROWSER google-chrome-beta
-set -gx CHROME_EXECUTABLE google-chrome-beta
+set -gx BROWSER google-chrome-unstable
+set -gx CHROME_EXECUTABLE google-chrome-unstable
 
 # aliases
 alias xt="exit"
@@ -19,6 +19,7 @@ alias gsync="bash ~/me/mindot/scripts/gsync.sh $1"
 alias npm="pnpm"
 alias npx="pnpm dlx"
 alias htop="btop"
+alias code="code-insiders"
 alias clone="luajit ~/me/mindot/scripts/gitclone.lua"
 alias ls="exa --group-directories-first -laFh --git --no-user --no-time --octal-permissions --no-permissions $argv"
 alias lsd="exa --group-directories-first -laFUmh --git --no-user --octal-permissions --no-permissions $argv"
@@ -26,7 +27,6 @@ alias lsx="exa --group-directories-first --icons -laFh --git --no-filesize --no-
 alias root="cd /"
 alias ncdu="gdu"
 alias mm="m (sk --preview='bat {} --color=always --theme Visual\ Studio\ Dark+')"
-alias clean_node_modules="find ~/me -name node_modules -type d -prune -exec trash {} +"
 
 # no greeting
 set fish_greeting
@@ -122,5 +122,3 @@ end
 set -gx PNPM_HOME "/home/bi/.local/share/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
 thefuck --alias | source
-
-set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /Users/bi/.ghcup/bin # ghcup-env

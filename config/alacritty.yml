@@ -13,6 +13,12 @@ key_bindings:
   - action: DecreaseFontSize
     key: Minus
     mods: Control
+  - action: IncreaseFontSize
+    key: Asterisk
+    mods: Command
+  - action: DecreaseFontSize
+    key: Minus
+    mods: Command
   - chars: "\u0017"
     key: Back
     mods: Control
