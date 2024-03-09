@@ -16,8 +16,6 @@ alias c="clear"
 alias m="micro"
 alias ttt="tt -blockcursor -notheme -showwpm -bold -words 200en -highlight1"
 alias gsync="bash ~/me/mindot/scripts/gsync.sh $1"
-alias npm="pnpm"
-alias npx="pnpm dlx"
 alias htop="btop"
 alias clone="luajit ~/me/mindot/scripts/gitclone.lua"
 alias ls="exa --group-directories-first -laFh --git --no-user --no-time --octal-permissions --no-permissions $argv"
@@ -124,3 +122,7 @@ set -gx PATH "$PNPM_HOME" $PATH
 thefuck --alias | source
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /Users/bi/.ghcup/bin # ghcup-env
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
