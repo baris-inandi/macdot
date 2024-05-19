@@ -1,5 +1,5 @@
 [user]
-name = baris-inandi
+name = Barış İnandıoğlu
 email = 68742481+baris-inandi@users.noreply.github.com
 [credential "https://github.com"]
 helper = !/opt/homebrew/bin/gh auth git-credential
@@ -20,5 +20,3 @@ hunk-header-decoration-style = blue box
 hunk-header-file-style = red
 hunk-header-line-number-style = "#067a00"
 hunk-header-style = file line-number syntax
-[safe]
-directory = /opt/flutter

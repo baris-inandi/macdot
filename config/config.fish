@@ -14,7 +14,6 @@ set -gx CHROME_EXECUTABLE google-chrome-beta
 alias xt="exit"
 alias c="clear"
 alias m="micro"
-alias ttt="tt -blockcursor -notheme -showwpm -bold -words 200en -highlight1"
 alias gsync="bash ~/me/mindot/scripts/gsync.sh $1"
 alias htop="btop"
 alias clone="luajit ~/me/mindot/scripts/gitclone.lua"
@@ -22,35 +21,11 @@ alias ls="exa --group-directories-first -laFh --git --no-user --no-time --octal-
 alias lsd="exa --group-directories-first -laFUmh --git --no-user --octal-permissions --no-permissions $argv"
 alias lsx="exa --group-directories-first --icons -laFh --git --no-filesize --no-permissions --no-user --no-time --tree --level 99 $argv"
 alias root="cd /"
-alias ncdu="gdu"
-alias mm="m (sk --preview='bat {} --color=always --theme Visual\ Studio\ Dark+')"
+alias mm="$EDITOR (sk --preview='bat {} --color=always --theme Visual\ Studio\ Dark+')"
 alias clean_node_modules="find ~/me -name node_modules -type d -prune -exec trash {} +"
 
 # no greeting
 set fish_greeting
-
-################################################################## P
-# Repeat previous command
-##################################################################
-function p
-    set idx 1
-    set prefix "sudo "
-    if [ "$argv" != su ]
-        set prefix ""
-    end
-    while true
-        set cmd "$history[$idx]"
-        set cmd_base "(echo "$cmd" | head -n1 | cut -d " " -f1)"
-        if [ "$cmd_base" != "$_" ]
-            set prefixed_cmd "$prefix$cmd"
-            echo "Running command: \"$prefixed_cmd\""
-            eval "$prefixed_cmd"
-            break
-        else
-            set idx (math $idx + 1)
-        end
-    end
-end
 
 ################################################################## VS
 # opens vscode in the current directory and exits immediately
@@ -119,9 +94,9 @@ end
 
 set -gx PNPM_HOME "/home/bi/.local/share/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
-thefuck --alias | source
 
-set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /Users/bi/.ghcup/bin # ghcup-env
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
+set -gx PATH $HOME/.cabal/bin $PATH /Users/bi/.ghcup/bin # ghcup-env
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
