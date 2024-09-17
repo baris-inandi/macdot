@@ -1,5 +1,5 @@
 [user]
-name = Barış İnandıoğlu
+name = Baris Inandioglu
 email = 68742481+baris-inandi@users.noreply.github.com
 [credential "https://github.com"]
 helper = !/opt/homebrew/bin/gh auth git-credential

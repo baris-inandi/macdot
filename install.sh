@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-mkdir -p ~/.config/fish/
-ln -f -s ~/me/mindot/config/config.fish ~/.config/fish/config.fish
-
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+ln -f -s ~/me/mindot/config/.zshrc ~/.zshrc
 ln -f -s ~/me/mindot/config/.gitconfig ~/.gitconfig
+mkdir ~/.local/bin
