@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="Gnzh"
+ZSH_THEME="eastwood"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -108,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 ##################################################################
 
 path+='/opt/homebrew/bin'
-path+='$HOME/.local/bin'
+path+='$HOME/.cargo/bin'
 export PATH
 
 # aliases
@@ -116,14 +116,13 @@ alias xt="exit"
 alias c="clear"
 alias m="micro"
 alias gsync="bash ~/me/macdot/scripts/gsync.sh $1"
-alias htop="btop"
 alias clone="python3 ~/me/macdot/scripts/gitclone.py"
-alias ls="exa --group-directories-first -laFh --git --no-user --no-time --octal-permissions --no-permissions $argv"
-alias lsd="exa --group-directories-first -laFUmh --git --no-user --octal-permissions --no-permissions $argv"
-alias lsx="exa --group-directories-first --icons -laFh --git --no-filesize --no-permissions --no-user --no-time --tree --level 99 $argv"
+alias ls="lsd -la $argv --config-file ~/me/macdot/config/lsconfig.yml"
+alias lsx="lsd -la $argv --config-file ~/me/macdot/config/treelsconfig.yml"
 alias root="cd /"
 alias mm="$EDITOR (sk --preview='bat {} --color=always --theme Visual\ Studio\ Dark+')"
 alias clean_node_modules="find ~/me -name node_modules -type d -prune -exec trash {} +"
+alias python="python3"
 
 # Default editor
 export EDITOR="micro"
@@ -193,9 +192,13 @@ function mvthis {
     cd "$1"
 }
 
-# pnpm
-export PNPM_HOME="/home/bi/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"                                       # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+
+# bun completions
+[ -s "/Users/bi/.bun/_bun" ] && source "/Users/bi/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
