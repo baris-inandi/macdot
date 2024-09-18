@@ -1,1 +1,1 @@
-brew install trash sk micro lsd gh neofetch bat
+brew install trash sk micro lsd gh neofetch bat htop neofetch
