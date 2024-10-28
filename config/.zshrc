@@ -173,7 +173,7 @@ function d {
         return 1
     fi
     cd "$1"
-    if [ "$PWD" = "$HOME" ]; then
+    if [ "$1" = "$HOME" ]; then
         echo "\033[36md:\033[0m Home directory"
     else
         echo "\033[36md:\033[0m $PWD"
@@ -202,3 +202,4 @@ export NVM_DIR="$HOME/.nvm"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
