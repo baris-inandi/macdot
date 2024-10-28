@@ -204,3 +204,6 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="$HOME/flutter/bin:$PATH"
+
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
