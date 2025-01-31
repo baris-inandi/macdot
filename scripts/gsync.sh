@@ -23,4 +23,6 @@ git commit -am "$cm"
 printf "${bold}${color}GSYNC: Pushing...\n${normal}${white}"
 git push
 
-printf "${bold}${color}REPO SYNCED\n${normal}${white}"
+url="$(git config --get remote.origin.url)"
+
+printf "${bold}${color}REPO SYNCED at${normal}${white} $url"
