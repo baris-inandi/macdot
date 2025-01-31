@@ -2,7 +2,7 @@
 
 bold=$(tput bold)
 normal=$(tput sgr0)
-color=$(tput setaf 5)
+color=$(tput setaf 12)
 red=$(tput setaf 1)
 white=$(tput sgr0)
 
@@ -13,14 +13,14 @@ else
   cm="$@"
 fi
 
-printf "${bold}${color}GSYNC:${white} Syncing \"$cm\"\n${normal}"
-printf "${bold}${color}GSYNC:${white} Adding all changes...\n${normal}"
+printf "${bold}${color}GSYNC: Syncing commit \"$cm\"\n${normal}"
+printf "${bold}${color}GSYNC: Adding all changes...\n${normal}"
 git add -A
 
-printf "${bold}${color}GSYNC:${white} Committing...\n${normal}"
+printf "${bold}${color}GSYNC: Committing...\n${normal}"
 git commit -am "$cm"
 
-printf "${bold}${color}GSYNC:${white} Pushing...\n${normal}"
+printf "${bold}${color}GSYNC: Pushing...\n${normal}"
 git push
 
-printf "${bold}${color}REPO SYNCED${white}\n${normal}"
+printf "${bold}${color}REPO SYNCED\n${normal}"
