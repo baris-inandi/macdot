@@ -3,12 +3,14 @@
 bold=$(tput bold)
 normal=$(tput sgr0)
 color=$(tput setaf 5)
+red=$(tput setaf 1)
 white=$(tput sgr0)
 
 if [ -z "$1" ]; then
-  cm=commit
+  echo ${bold}${red}"Please provide a commit message"${normal}${white}
+  exit 1
 else
-  cm="$1"
+  cm="$@"
 fi
 
 printf "${bold}${color}GSYNC:${white} Syncing \"$cm\"\n${normal}"
