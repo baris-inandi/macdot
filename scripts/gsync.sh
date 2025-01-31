@@ -13,14 +13,14 @@ else
   cm="$@"
 fi
 
-printf "${bold}${color}GSYNC: Syncing commit \"$cm\"\n${normal}"
-printf "${bold}${color}GSYNC: Adding all changes...\n${normal}"
+printf "${bold}${color}GSYNC: Syncing commit \"$cm\"\n${normal}${white}"
+printf "${bold}${color}GSYNC: Adding all changes...\n${normal}${white}"
 git add -A
 
-printf "${bold}${color}GSYNC: Committing...\n${normal}"
+printf "${bold}${color}GSYNC: Committing...\n${normal}${white}"
 git commit -am "$cm"
 
-printf "${bold}${color}GSYNC: Pushing...\n${normal}"
+printf "${bold}${color}GSYNC: Pushing...\n${normal}${white}"
 git push
 
-printf "${bold}${color}REPO SYNCED\n${normal}"
+printf "${bold}${color}REPO SYNCED\n${normal}${white}"
