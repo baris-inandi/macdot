@@ -3,6 +3,7 @@
 bold=$(tput bold)
 normal=$(tput sgr0)
 color=$(tput setaf 12)
+green=$(tput setaf 2)
 red=$(tput setaf 1)
 white=$(tput sgr0)
 
@@ -25,4 +26,4 @@ git push
 
 url="$(git config --get remote.origin.url)"
 
-printf "${bold}${color}REPO SYNCED at${normal}${white} $url"
+printf "\n${bold}${green}REPO SYNCED at${normal}${white} $url\n"
