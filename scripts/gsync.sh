@@ -8,8 +8,9 @@ red=$(tput setaf 1)
 white=$(tput sgr0)
 
 if [ -z "$1" ]; then
-  echo ${bold}${red}"Please provide a commit message"${normal}${white}
-  exit 1
+  printf "${bold}${color}GSYNC: No commit message. Just pushing repo.\n${normal}${white}"
+  git push
+  exit 0
 else
   cm="$@"
 fi
