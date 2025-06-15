@@ -1,3 +1,3 @@
 # macdot
 
-A minimal version of baris-inandi/dot build with MacOS in mind.
+A minimal version of baris-inandi/dot built with MacOS in mind.
